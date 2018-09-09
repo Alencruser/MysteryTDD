@@ -35,6 +35,12 @@ final class mysteryTest extends TestCase
     $partie5->checkInput(42);
     $this->assertEquals("Vous avez perdu !",$partie5->checkinput(-1));
   }
+  public function testNumber()
+  {
+    $partie6= new Mystery(3);
+    $this->assertGreaterThan(-1,$partie6->getNumber());
+    $this->assertLessThan(10,$partie6->getNumber());
+  }
 }
 
 
